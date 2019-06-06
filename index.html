@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(bg.jpg); background-size: 100% 100%; height: 750px;">
+	<div class="enemyDiv" style="height: 200px; width: 800px; margin-left: 350px; margin-top: 10px;"></div>
+	<div class=" playerDiv" style="height: 200px; width: 800px; margin-left: 350px; margin-top: 300px;"></div>
+	<script type="text/javascript">	
+		
+		let getRandom = function(){
+			let rand = Math.random()*4
+			let round = Math.round(rand)
+			return round		
+		}			
+		let cardRandom = function(){
+			let rand = Math.random()*4
+			let round = Math.round(rand)
+			return round		
+		}
+		let playerCard = function(arg){
+			for(let index = 0; index<arg; index = index + 1){
+				let rand = Math.random()*10
+				let round = Math.round(rand)
+				let array = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"]
+				let card = document.createElement('img')
+				document.playerDiv.appendChild(card)
+				card.src = array[round]
+				card.style.width = "150px"
+				card.style.height = "150px"
+			}	
+		}
+		let enemyCard = function(arg){
+			for(let index = 0; index<arg; index = index + 1){
+				let rand = Math.random()*10
+				let round = Math.round(rand)
+				let array = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"]
+				let card = document.createElement('img')
+				let div = document.createElement("div")
+				document.querySelector(".enemyDiv").appendChild(card)
+
+				card.src = array[round]
+				card.style.width = "150px"
+				card.style.height = "150px"
+				
+				
+				
+			}	
+		}
+	</script>
+</body>
+</html>
